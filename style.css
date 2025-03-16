@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+body {
+    background-color: #f4f4f4;
+}
+.mainNav {
+    position:fixed;
+    height: 100%;
+    width: 200px;
+    background-color: #050315;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#logo {
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+}
+.mainNav nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+    position: relative;
+    width: 70%;
+    padding: 10px 30px 10px 30px;
+    display: flex;
+    justify-content: center;
+    border: solid 1px transparent;
+}
+.mainNav nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    width: 90%;
+}
+.mainNav nav i {
+    position: absolute;
+    left: 35px;
+    bottom: 12px;
+    font-size: 20px;
+}
+.mainNav nav a:hover {
+    border: solid 1px #0d0739;
+    background-color: #0d0739;
+    border-radius: 5px;
+}
+.mainNav footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    background: #050315;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    margin-left: 200px;
+    background-color: white;
+}
+.firstContainer {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    
+}
+/* .firstContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('z12.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -1;
+} */
+
+
+.firstContainer button {
+    border: solid 1px aqua;
+    background-color: aqua;
+    color: #050315;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 50px; 
+    cursor: pointer;   
+}
+.skillsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: appear  1.5s linear 0.5s forwards;
+    opacity: 0;
+    animation-timeline: view(100% 1%);
+}
+.skillsContainer div {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.skillsContainer div p {
+    z-index: 2;
+    transform: translateY(200%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+    color: aqua;
+}
+
+.skillsContainer div:hover p{
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    transform: translatey(0%);
+    backdrop-filter: blur(5px);
+    transition: 0.7s;
+
+
+}
+.skillsContainer div:hover h3 {
+    transform: scale(1.3);
+    z-index: 3;
+    transition: 1s;
+    color: white;
+}
+@keyframes appear {
+    from {
+        z-index: 0;
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+
+    }
+    
+}
+.skillsContainer div img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 1;
+}
+.skillsContainer div:hover img {
+    transform: scale(1.1);
+    transition: 0.5s;
+
+}
+#ytVideo, #schoolLocation{
+    width: 100%;
+    height: 100vh;
+    margin: 30px;
+}
+#contact {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    height: 120px;
+    background-color: #050315;
+    color: white;
+}
+#contact footer {
+    margin: 20px;
+}
+#symbols {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 50px;
+}
+/* section, article, aside {
+    margin-bottom: 20px;
+} */
+
+iframe {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
