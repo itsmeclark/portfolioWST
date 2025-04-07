@@ -141,7 +141,7 @@ main {
 .firstContainer div {
     position: relative;
     top: 200px;
-    font-size: 20px;
+    font-size: 27px;
 
 }
 .firstContainer div strong {
@@ -154,10 +154,10 @@ main {
     background-color:#050315;
     color: aqua;
     text-decoration: none;
-    width: 150px;
-    height: 40px;
+    width: 170px;
+    height: 50px;
     margin: 15px 0px 0px 10px;
-    font-size: 15px;
+    font-size: 17px;
     border-radius: 10px; 
     cursor: pointer;  
     display: flex; 
@@ -226,7 +226,7 @@ main {
     align-items: center;
     border-radius: 10px;
     position: relative;
-    top: 40px;
+    top: 100px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 2;
@@ -292,6 +292,30 @@ main {
     width: 100%;
     height: 100vh;
 }
+#ytVideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+#ytVideo iframe {
+    transform: translateX(-200%);
+}
+#ytVideo p {
+    transform: translateX(200%);
+}
+#schoolLocation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+/* #schoolLocation iframe {
+    transform: translateX(200%);
+}
+#schoolLocation p {
+    transform: translateX(-200%);
+} */
 #contact {
     display: flex;
     justify-content: flex-end;
@@ -366,6 +390,6 @@ table td {
  }
 
 iframe {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
 }

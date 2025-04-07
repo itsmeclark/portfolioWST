@@ -28,23 +28,37 @@ window.onscroll = () => {
     // if(window.scrollY == 0 || window.scrollY == ){
     //     left = 0
     // }
+    console.log(window.scrollY )
     if(window.scrollY >= 100 && window.scrollY <= 1000  ){
         appear()
-    }
-    else if(window.scrollY >= 1300 && window.scrollY <= 2000 || window.scrollY === 0){
-        disappear()
-    }
-    if(window.scrollY >= 2700){
-        console.log(window.scrollY)
-        linkAppear()
-    }
-    if(window.scrollY < 2700){
+        hideVideo()
+        hideSchool()
         linkDisappear()
     }
+    else if(window.scrollY >= 1400 && window.scrollY <= 2700 || window.scrollY === 0){
+        displayVideo()
+        disappear()
+        hideSchool()
+        linkDisappear()
+    }
+    if(window.scrollY >= 2700){
+        linkAppear()
+        hideVideo()
+    }
+    if(window.scrollY < 2300){
+        linkDisappear()
+    }
+    if(window.scrollY >= 2310){
+        displaySchool()
+        hideVideo()
+    }
+    // if(window.screenY >= 2900){
+    //     hideSchool()
+    // }
 }
 function appear(){
     skills.forEach(element => {
-        element.style.animation =  `appear  1s ease 0.2s forwards`
+        element.style.animation =  `appear  1s ease 0s forwards`
     });
 }
 function disappear(){
@@ -74,7 +88,7 @@ function linkAppear(){
     let linkImg = document.querySelector("#link img")
     linkImg.style.transform = 'translateX(0%)'
     linkImg.style.transition = "0.5s ease-in-out 0.5s"
-
+    hideSchool()
     let emojies = document.getElementById('emojies')
     emojies.style.transform = 'translateX(0%)'
     emojies.style.transition = "0.5s ease-in-out 0.5s"
@@ -131,4 +145,38 @@ function personalInfoHide(){
     setTimeout(()=>{
         personalButtonDisappear()
     }, 1000)
+}
+
+let ytVideo = document.querySelector('#ytVideo iframe')
+let ytParagraph = document.querySelector('#ytVideo p')
+
+function displayVideo(){
+    ytVideo.style.transform = 'translateX(0%)';
+    ytVideo.style.transition = "0.5s ease-in-out 0s";
+    ytParagraph.style.transform = 'translateX(0%)';
+    ytParagraph.style.transition = "0.5s ease-in-out 0s";
+
+}
+function hideVideo(){
+    ytVideo.style.transform = 'translateX(-200%)';
+    ytVideo.style.transition = "0.5s ease-in-out 0s";
+    ytParagraph.style.transform = 'translateX(200%)';
+    ytParagraph.style.transition = "0.5s ease-in-out 0s";
+}
+
+let schoolLocationIframe = document.querySelector('#schoolLocation iframe')
+let schoolLocationParagraph = document.querySelector('#schoolLocation p')
+
+function displaySchool(){
+    schoolLocationIframe.style.transform = 'translateX(0%)';
+    schoolLocationIframe.style.transition = "0.5s ease-in-out 0s";
+    schoolLocationParagraph.style.transform = 'translateX(0%)';
+    schoolLocationParagraph.style.transition = "0.5s ease-in-out 0s";
+}
+function hideSchool(){
+    console.log('hello')
+    schoolLocationIframe.style.transform = 'translateX(200%)';
+    schoolLocationIframe.style.transition = "0.5s ease-in-out 0s";
+    schoolLocationParagraph.style.transform = 'translateX(-200%)';
+    schoolLocationParagraph.style.transition = "0.5s ease-in-out 0s";
 }
