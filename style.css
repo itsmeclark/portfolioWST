@@ -71,6 +71,64 @@ main {
     margin-left: 200px;
     background-color: white;
 }
+.personalDetails {
+    position: absolute;
+    width: 85%;
+    height: 95vh;
+    z-index: 99;
+    right: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-200%);
+    overflow: hidden;
+    backdrop-filter: blur(50px);
+    border: solid 1px aqua;
+}
+.personalDetails .personalInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 750px;
+    height: 800px;
+
+}
+.personalDetails .personalInfo img {
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 50%;
+}
+.personalInfo nav {
+    margin: 20px;
+    border: solid 1px aqua;
+    width: 80%;
+    height: 30px;
+    align-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+.personalDetails .buttonUp {
+    position: absolute;
+    z-index: 999;
+    border: solid 1px aqua;
+    background-color: aqua;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    font-size: 40px;
+    bottom: 0px;
+    cursor: pointer;
+}
+.buttonUp:hover {
+    transform: translateY(-10%);
+    transition: 0.3 ease-in-out;
+}
 .firstContainer {
     width: 100%;
     height: 110vh;
@@ -137,7 +195,7 @@ main {
     height: 70px;
     position: absolute;
     top: -50px;
-    left: 550px;
+    left: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,8 +216,8 @@ main {
     /* animation-timeline: view(100% 1%); */
 }
 .skillsContent {
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
     background-color: white;
     margin: 20px;
     display: flex;
@@ -195,7 +253,7 @@ main {
     transform: translateY(0%);
 
 } */
-.skillsContainer div:hover h3 {
+.skillsContainer div:hover h2 {
     transform: scale(1.3);
     z-index: 4;
     transition: 0.5s;
@@ -220,8 +278,8 @@ main {
 }
 
 .skillsContainer div img {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     position: absolute;
     z-index: 1;
 }

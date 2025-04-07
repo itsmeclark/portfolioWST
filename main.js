@@ -31,14 +31,14 @@ window.onscroll = () => {
     if(window.scrollY >= 100 && window.scrollY <= 1000  ){
         appear()
     }
-    else if(window.scrollY >= 1050 && window.scrollY <= 1500 || window.scrollY === 0){
+    else if(window.scrollY >= 1300 && window.scrollY <= 2000 || window.scrollY === 0){
         disappear()
     }
-    if(window.scrollY >= 2500){
+    if(window.scrollY >= 2700){
         console.log(window.scrollY)
         linkAppear()
     }
-    if(window.scrollY < 2500){
+    if(window.scrollY < 2700){
         linkDisappear()
     }
 }
@@ -84,14 +84,51 @@ function linkAppear(){
 }
 function linkDisappear() {
     let linkImg = document.querySelector("#link img")
-    linkImg.style.transform = 'translateX(-130%)'
+    linkImg.style.transform = 'translateX(-200%)'
     linkImg.style.transition = "0.5s ease-in-out 0.5s"
 
     let emojies = document.getElementById('emojies')
-    emojies.style.transform = 'translateX(130%)'
+    emojies.style.transform = 'translateX(200%)'
     emojies.style.transition = "0.5s ease-in-out 0.5s"
 
     setTimeout(()=>{
         emojiDisappear()
     }, 500)
+}
+
+let infoButton = document.getElementById('infoButton')
+let personalDetails = document.querySelector('.personalDetails')
+let buttonUp = document.querySelector('.buttonUp')
+let personalInfo = document.querySelectorAll('.personalInfo')
+
+
+infoButton.onclick = ()=>{
+    personalButtonAppear()
+    personalInfoSlide()
+} 
+buttonUp.onclick = () => {
+    personalInfoHide()
+}
+function personalButtonAppear(){
+    personalDetails.style.transform = 'translateY(0%)';
+    personalDetails.style.transition = "1s ease-in-out 0s"
+}
+function personalButtonDisappear(){
+    personalDetails.style.transform = 'translateY(-200%)';
+    personalDetails.style.transition = "1s ease-in-out 0s";
+}
+function personalInfoSlide(){
+    personalInfo[0].style.transform = 'translateX(0%)';
+    personalInfo[0].style.transition = "0.7s ease-in-out 0.7s";
+    personalInfo[1].style.transform = 'translateX(0%)';
+    personalInfo[1].style.transition = "0.7s ease-in-out 0.7s";
+}
+function personalInfoHide(){
+    personalInfo[0].style.transform = 'translateX(-100%)';
+    personalInfo[0].style.transition = "0.7s ease-in-out 0.5s";
+    personalInfo[1].style.transform = 'translateX(100%)';
+    personalInfo[1].style.transition = "0.7s ease-in-out 0.5s";
+    setTimeout(()=>{
+        personalButtonDisappear()
+    }, 1000)
 }
